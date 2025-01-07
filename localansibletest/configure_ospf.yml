@@ -1,0 +1,12 @@
+- name: Configure OSPF
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Configure OSPF on the router
+      ios_config:
+        lines:
+          - "no router ospf 1"
+          - "router ospf 1"
+          - "router-id {{ router_id }}"
+          - "network 0.0.0.0 0.0.0.0 area 0"
+      

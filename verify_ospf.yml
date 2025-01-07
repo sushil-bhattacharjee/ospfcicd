@@ -1,0 +1,13 @@
+- name: Verify OSPF Neighborship
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Check OSPF Neighbors
+      ios_command:
+        commands:
+          - "show ip ospf neighbor"
+      register: ospf_output
+
+    - name: Display OSPF Neighbor Output
+      debug:
+        msg: "{{ ospf_output.stdout_lines }}"

@@ -1,0 +1,28 @@
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  ANSIBLE_HOST_KEY_CHECKING: "False"
+
+build:
+  stage: build
+  script:
+    - echo "Configuring OSPF for R1 and R2"
+    - ansible-playbook configure_ospf.yml -i inventory.yml --limit R1,R2
+
+test:
+  stage: test
+  script:
+    - echo "Verifying OSPF Neighborship between R1 and R2"
+    - ansible-playbook verify_ospf.yml -i inventory.yml --limit R1,R2
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Configuring OSPF for R2 and R3"
+    - ansible-playbook configure_ospf.yml -i inventory.yml --limit R2,R3
+
+    - echo "Verifying OSPF Neighborship between R2 and R3"
+    - ansible-playbook verify_ospf.yml -i inventory.yml --limit R2,R3
