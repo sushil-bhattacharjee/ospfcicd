@@ -1,3 +1,5 @@
+image: cytopia/ansible:latest
+
 stages:
   - build
   - test
