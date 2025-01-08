@@ -57,6 +57,8 @@ deploy:
   script:
     - echo "Configuring OSPF for R5 and R3"
     - ansible-playbook configure_ospf.yml -i inventory.yml --limit R5,R3
+    - echo "Waiting for 60 seconds to allow OSPF adjacency to form"
+    - sleep 60
     - echo "Verifying OSPF Neighborship between R5 and R3"
     - ansible-playbook verify_ospf.yml -i inventory.yml --limit R5,R3
 
