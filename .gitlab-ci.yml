@@ -22,6 +22,7 @@ before_script:
   - pip install -r requirements.txt
   - chmod 755 $CI_PROJECT_DIR
   - export ANSIBLE_CONFIG=$CI_PROJECT_DIR/ansible.cfg
+  - ansible --version
 
 connection_test:
   stage: connection_test
