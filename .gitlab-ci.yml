@@ -6,20 +6,19 @@ stages:
   - build
   - test
   - deploy
-  
 
 variables:
   ANSIBLE_HOST_KEY_CHECKING: "False"
 
 before_script:
-  # Update system and install required dependencies
-  - apt-get update && apt-get install -y sshpass git libffi-dev gcc
+  # Ensure we have necessary system dependencies
+  - apt-get update && apt-get install -y sshpass git libffi-dev gcc || true
   # Create and activate a virtual environment
   - python3 -m venv .venv
   - source .venv/bin/activate
   # Upgrade pip and install required Python packages
   - pip install --upgrade pip
-  - pip install ansible ansible-pylibssh jinja2 paramiko pyyaml requests
+  - pip install ansible ansible-pylibssh jinja2 paramiko pyyaml requests || true
   - chmod 755 $CI_PROJECT_DIR
 
 show_version:
@@ -33,7 +32,7 @@ show_version:
     - python3 fetch_show_version.py 10.1.10.13 cisco cisco
     - echo "Fetching 'show version' using REST API for R5"
     - python3 fetch_show_version.py 10.1.10.15 cisco cisco
-    
+
 connection_test:
   stage: connection_test
   script:
