@@ -7,11 +7,18 @@ pipeline {
         stage('Setup') {
             steps {
                 sh '''
-                    apt-get update && apt-get install -y sshpass git libffi-dev gcc || true
+                    # Using sudo for apt-get commands to resolve permission issues
+                    sudo apt-get update && sudo apt-get install -y sshpass git libffi-dev gcc || true
+
+                    # Creating and activating a Python virtual environment
                     python3 -m venv .venv
-                    source .venv/bin/activate
+                    . .venv/bin/activate
+
+                    # Upgrading pip and installing required Python packages
                     pip install --upgrade pip
                     pip install ansible ansible-pylibssh jinja2 paramiko pyyaml requests || true
+                    
+                    # Setting permissions for the workspace
                     chmod 755 $WORKSPACE
                 '''
             }
@@ -68,4 +75,5 @@ pipeline {
         }
     }
 }
+
 
