@@ -3,3 +3,4 @@ ansible-pylibssh
 Jinja2
 paramiko
 PyYAML
+requests

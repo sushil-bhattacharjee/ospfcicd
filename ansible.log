@@ -525,3 +525,154 @@ deprecation_warnings=False in ansible.cfg.
 2025-01-08 13:21:39,816 p=1621606 u=sushil n=ansible INFO| shutdown complete
 2025-01-08 13:21:39,817 p=1621608 u=sushil n=ansible INFO| shutdown complete
 2025-01-08 13:21:39,819 p=1621611 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 21:56:55,930 p=1657718 u=sushil n=ansible INFO| ansible-playbook [core 2.18.1]
+  config file = /home/sushil/OSPFCICD/ansible.cfg
+  configured module search path = ['/home/sushil/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/sushil/OSPFCICD/.ospfcicd/lib/python3.12/site-packages/ansible
+  ansible collection location = /home/sushil/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/sushil/OSPFCICD/.ospfcicd/bin/ansible-playbook
+  python version = 3.12.3 (main, Nov  6 2024, 18:32:19) [GCC 13.2.0] (/home/sushil/OSPFCICD/.ospfcicd/bin/python3)
+  jinja version = 3.1.5
+  libyaml = True
+2025-01-08 21:56:55,930 p=1657718 u=sushil n=ansible INFO| Using /home/sushil/OSPFCICD/ansible.cfg as config file
+2025-01-08 21:56:56,003 p=1657718 u=sushil n=ansible INFO| host_list declined parsing /home/sushil/OSPFCICD/inventory.yml as it did not pass its verify_file() method
+2025-01-08 21:56:56,003 p=1657718 u=sushil n=ansible INFO| script declined parsing /home/sushil/OSPFCICD/inventory.yml as it did not pass its verify_file() method
+2025-01-08 21:56:56,006 p=1657718 u=sushil n=ansible INFO| Parsed /home/sushil/OSPFCICD/inventory.yml inventory source with yaml plugin
+2025-01-08 21:56:56,045 p=1657718 u=sushil n=ansible INFO| redirecting (type: modules) ansible.builtin.ios_config to cisco.ios.ios_config
+2025-01-08 21:56:56,079 p=1657718 u=sushil n=ansible INFO| Skipping callback 'default', as we already have a stdout callback.
+2025-01-08 21:56:56,079 p=1657718 u=sushil n=ansible INFO| Skipping callback 'minimal', as we already have a stdout callback.
+2025-01-08 21:56:56,079 p=1657718 u=sushil n=ansible INFO| Skipping callback 'oneline', as we already have a stdout callback.
+2025-01-08 21:56:56,079 p=1657718 u=sushil n=ansible INFO| PLAYBOOK: configure_ospf.yml *********************************************************************************************************************************************************************
+2025-01-08 21:56:56,079 p=1657718 u=sushil n=ansible INFO| 1 plays in configure_ospf.yml
+2025-01-08 21:56:56,079 p=1657718 u=sushil n=ansible INFO| PLAY [Configure OSPF] ****************************************************************************************************************************************************************************
+2025-01-08 21:56:56,085 p=1657718 u=sushil n=ansible INFO| TASK [Debug connection details] ******************************************************************************************************************************************************************
+2025-01-08 21:56:56,085 p=1657718 u=sushil n=ansible INFO| task path: /home/sushil/OSPFCICD/configure_ospf.yml:6
+2025-01-08 21:56:56,095 p=1657718 u=sushil n=ansible INFO| redirecting (type: connection) ansible.builtin.network_cli to ansible.netcommon.network_cli
+2025-01-08 21:56:56,099 p=1657718 u=sushil n=ansible INFO| redirecting (type: connection) ansible.builtin.network_cli to ansible.netcommon.network_cli
+2025-01-08 21:56:56,138 p=1657718 u=sushil n=ansible INFO| ok: [R1] => {
+    "msg": "Connecting to R1 (10.1.10.11) with router ID 11.11.11.11"
+}
+2025-01-08 21:56:56,139 p=1657718 u=sushil n=ansible INFO| ok: [R2] => {
+    "msg": "Connecting to R2 (10.1.10.12) with router ID 12.12.12.12"
+}
+2025-01-08 21:56:56,140 p=1657718 u=sushil n=ansible INFO| TASK [Configure OSPF on the router] **************************************************************************************************************************************************************
+2025-01-08 21:56:56,140 p=1657718 u=sushil n=ansible INFO| task path: /home/sushil/OSPFCICD/configure_ospf.yml:10
+2025-01-08 21:56:56,152 p=1657718 u=sushil n=ansible INFO| redirecting (type: connection) ansible.builtin.network_cli to ansible.netcommon.network_cli
+2025-01-08 21:56:56,159 p=1657718 u=sushil n=ansible INFO| redirecting (type: connection) ansible.builtin.network_cli to ansible.netcommon.network_cli
+2025-01-08 21:56:56,192 p=1657718 u=sushil n=ansible INFO| redirecting (type: modules) ansible.builtin.ios_config to cisco.ios.ios_config
+2025-01-08 21:56:56,192 p=1657718 u=sushil n=ansible INFO| redirecting (type: action) ansible.builtin.ios to cisco.ios.ios
+2025-01-08 21:56:56,192 p=1657718 u=sushil n=ansible INFO| redirecting (type: action) ansible.builtin.ios to cisco.ios.ios
+2025-01-08 21:56:56,203 p=1657718 u=sushil n=ansible INFO| redirecting (type: modules) ansible.builtin.ios_config to cisco.ios.ios_config
+2025-01-08 21:56:56,203 p=1657718 u=sushil n=ansible INFO| redirecting (type: action) ansible.builtin.ios to cisco.ios.ios
+2025-01-08 21:56:56,203 p=1657718 u=sushil n=ansible INFO| redirecting (type: action) ansible.builtin.ios to cisco.ios.ios
+2025-01-08 21:56:56,476 p=1657749 u=sushil n=ansible INFO| redirecting (type: connection) ansible.builtin.network_cli to ansible.netcommon.network_cli
+2025-01-08 21:56:56,491 p=1657752 u=sushil n=ansible INFO| redirecting (type: connection) ansible.builtin.network_cli to ansible.netcommon.network_cli
+2025-01-08 21:56:56,580 p=1657718 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 21:56:56,581 p=1657718 u=sushil n=ansible INFO| redirecting (type: action) ansible.builtin.ios to cisco.ios.ios
+2025-01-08 21:56:56,581 p=1657718 u=sushil n=ansible INFO| redirecting (type: modules) ansible.builtin.ios_config to cisco.ios.ios_config
+2025-01-08 21:56:56,585 p=1657749 u=sushil n=ansible INFO| <10.1.10.11> USING PYLIBSSH VERSION 1.2.2
+2025-01-08 21:56:56,585 p=1657749 u=sushil n=ansible INFO| <10.1.10.11> ESTABLISH LIBSSH CONNECTION FOR USER: cisco on PORT 22 TO 10.1.10.11
+2025-01-08 21:56:56,585 p=1657749 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 21:56:56,601 p=1657718 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 21:56:56,601 p=1657718 u=sushil n=ansible INFO| redirecting (type: action) ansible.builtin.ios to cisco.ios.ios
+2025-01-08 21:56:56,602 p=1657718 u=sushil n=ansible INFO| redirecting (type: modules) ansible.builtin.ios_config to cisco.ios.ios_config
+2025-01-08 21:56:56,607 p=1657752 u=sushil n=ansible INFO| <10.1.10.12> USING PYLIBSSH VERSION 1.2.2
+2025-01-08 21:56:56,607 p=1657752 u=sushil n=ansible INFO| <10.1.10.12> ESTABLISH LIBSSH CONNECTION FOR USER: cisco on PORT 22 TO 10.1.10.12
+2025-01-08 21:56:56,607 p=1657752 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 21:56:57,137 p=1657749 u=sushil n=ansible INFO| ssh connection is OK: <pylibsshext.session.Session object at 0x7cda06159a80>
+2025-01-08 21:56:57,177 p=1657752 u=sushil n=ansible INFO| ssh connection is OK: <pylibsshext.session.Session object at 0x7073b8461b70>
+2025-01-08 21:57:01,276 p=1657718 u=sushil n=ansible WARNING| [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device
+
+2025-01-08 21:57:01,276 p=1657718 u=sushil n=ansible INFO| changed: [R1] => {
+    "banners": {},
+    "changed": true,
+    "commands": [
+        "no router ospf 1",
+        "router ospf 1",
+        "router-id 11.11.11.11",
+        "network 0.0.0.0 0.0.0.0 area 0"
+    ],
+    "invocation": {
+        "module_args": {
+            "after": null,
+            "backup": false,
+            "backup_options": null,
+            "before": null,
+            "defaults": false,
+            "diff_against": null,
+            "diff_ignore_lines": null,
+            "intended_config": null,
+            "lines": [
+                "no router ospf 1",
+                "router ospf 1",
+                "router-id 11.11.11.11",
+                "network 0.0.0.0 0.0.0.0 area 0"
+            ],
+            "match": "line",
+            "multiline_delimiter": "@",
+            "parents": null,
+            "replace": "line",
+            "running_config": null,
+            "save_when": "never",
+            "src": null
+        }
+    },
+    "updates": [
+        "no router ospf 1",
+        "router ospf 1",
+        "router-id 11.11.11.11",
+        "network 0.0.0.0 0.0.0.0 area 0"
+    ]
+}
+2025-01-08 21:57:01,337 p=1657718 u=sushil n=ansible INFO| changed: [R2] => {
+    "banners": {},
+    "changed": true,
+    "commands": [
+        "no router ospf 1",
+        "router ospf 1",
+        "router-id 12.12.12.12",
+        "network 0.0.0.0 0.0.0.0 area 0"
+    ],
+    "invocation": {
+        "module_args": {
+            "after": null,
+            "backup": false,
+            "backup_options": null,
+            "before": null,
+            "defaults": false,
+            "diff_against": null,
+            "diff_ignore_lines": null,
+            "intended_config": null,
+            "lines": [
+                "no router ospf 1",
+                "router ospf 1",
+                "router-id 12.12.12.12",
+                "network 0.0.0.0 0.0.0.0 area 0"
+            ],
+            "match": "line",
+            "multiline_delimiter": "@",
+            "parents": null,
+            "replace": "line",
+            "running_config": null,
+            "save_when": "never",
+            "src": null
+        }
+    },
+    "updates": [
+        "no router ospf 1",
+        "router ospf 1",
+        "router-id 12.12.12.12",
+        "network 0.0.0.0 0.0.0.0 area 0"
+    ]
+}
+2025-01-08 21:57:01,339 p=1657718 u=sushil n=ansible INFO| PLAY RECAP ***************************************************************************************************************************************************************************************
+2025-01-08 21:57:01,339 p=1657718 u=sushil n=ansible INFO| R1                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 21:57:01,339 p=1657718 u=sushil n=ansible INFO| R2                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 21:57:01,442 p=1657749 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 21:57:01,442 p=1657752 u=sushil n=ansible INFO| shutdown complete

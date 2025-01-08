@@ -1,10 +1,12 @@
 image: python:3.10-slim
 
 stages:
+  - show_version
   - connection_test
   - build
   - test
   - deploy
+  
 
 variables:
   ANSIBLE_HOST_KEY_CHECKING: "False"
@@ -17,32 +19,43 @@ before_script:
   - source .venv/bin/activate
   # Upgrade pip and install required Python packages
   - pip install --upgrade pip
-  - pip install ansible ansible-pylibssh jinja2 paramiko pyyaml
-  # Ensure correct directory permissions
+  - pip install ansible ansible-pylibssh jinja2 paramiko pyyaml requests
   - chmod 755 $CI_PROJECT_DIR
 
+show_version:
+  stage: show_version
+  script:
+    - echo "Fetching 'show version' using REST API for R1"
+    - python3 fetch_show_version.py 10.1.10.11 cisco cisco
+    - echo "Fetching 'show version' using REST API for R2"
+    - python3 fetch_show_version.py 10.1.10.12 cisco cisco
+    - echo "Fetching 'show version' using REST API for R3"
+    - python3 fetch_show_version.py 10.1.10.13 cisco cisco
+    
 connection_test:
   stage: connection_test
   script:
     - echo "Testing SSH connectivity to all routers"
     - ansible all -i inventory.yml -m ping
-    - apt-get update && apt-get install -y sshpass
-    - echo "Testing SSH connectivity to devices"
-    - sshpass -p 'cisco' ssh -o StrictHostKeyChecking=no cisco@10.1.10.11 "show version"
-    - sshpass -p 'cisco' ssh -o StrictHostKeyChecking=no cisco@10.1.10.12 "show version"
-    - sshpass -p 'cisco' ssh -o StrictHostKeyChecking=no cisco@10.1.10.13 "show version"
 
 build:
   stage: build
   script:
-    - echo "Verifying SSH access with CLI commands"
-    - ansible-playbook verify_ssh.yml -i inventory.yml -vvv
     - echo "Configuring OSPF for R1 and R2"
-    - ansible-playbook configure_ospf.yml -i inventory.yml -vvv
+    - ansible-playbook configure_ospf.yml -i inventory.yml --limit R1,R2 -vvv
 
 test:
   stage: test
   script:
     - echo "Verifying OSPF Neighborship between R1 and R2"
-    - ansible-playbook verify_ospf.yml -i inventory.yml 
+    - ansible-playbook verify_ospf.yml -i inventory.yml --limit R1,R2
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Configuring OSPF for R2 and R3"
+    - ansible-playbook configure_ospf.yml -i inventory.yml --limit R2,R3
+    - echo "Verifying OSPF Neighborship between R2 and R3"
+    - ansible-playbook verify_ospf.yml -i inventory.yml --limit R2,R3
+
 
