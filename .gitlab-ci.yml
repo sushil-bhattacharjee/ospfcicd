@@ -1,4 +1,4 @@
-image: cytopia/ansible:latest
+image: ubuntu:latest
 
 stages:
   - connection_test
@@ -10,8 +10,16 @@ variables:
   ANSIBLE_HOST_KEY_CHECKING: "False"
 
 before_script:
-  - export ANSIBLE_CONFIG=$CI_PROJECT_DIR/ansible.cfg
-  - pip install paramiko
+  # Update system packages
+  - apt-get update -y
+  - apt-get install -y python3 python3-pip python3-venv
+  # Create a virtual environment
+  - python3 -m venv .venv
+  # Activate the virtual environment
+  - source .venv/bin/activate
+  # Install required Python packages
+  - pip install --upgrade pip
+  - pip install ansible paramiko
 
 connection_test:
   stage: connection_test
@@ -36,6 +44,5 @@ deploy:
   script:
     - echo "Configuring OSPF for R2 and R3"
     - ansible-playbook configure_ospf.yml -i inventory.yml --limit R2,R3
-
     - echo "Verifying OSPF Neighborship between R2 and R3"
     - ansible-playbook verify_ospf.yml -i inventory.yml --limit R2,R3
