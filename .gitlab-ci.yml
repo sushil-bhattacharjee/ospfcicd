@@ -19,7 +19,6 @@ before_script:
   # Upgrade pip and install required Python packages
   - pip install --upgrade pip
   - pip install ansible ansible-pylibssh jinja2 paramiko pyyaml requests || true
-  - pip install -r requirements.txt
   - chmod 755 $CI_PROJECT_DIR
 
 show_version:
