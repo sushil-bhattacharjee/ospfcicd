@@ -1,0 +1,527 @@
+2025-01-08 13:19:52,695 p=1620266 u=sushil n=ansible INFO| PLAY [Configure OSPF] ****************************************************************************************************************************************************************************
+2025-01-08 13:19:52,700 p=1620266 u=sushil n=ansible INFO| TASK [Debug connection details] ******************************************************************************************************************************************************************
+2025-01-08 13:19:52,743 p=1620266 u=sushil n=ansible INFO| ok: [R1] => {
+    "msg": "Connecting to R1 (10.1.10.11) with router ID 11.11.11.11"
+}
+2025-01-08 13:19:52,744 p=1620266 u=sushil n=ansible INFO| ok: [R2] => {
+    "msg": "Connecting to R2 (10.1.10.12) with router ID 12.12.12.12"
+}
+2025-01-08 13:19:52,749 p=1620266 u=sushil n=ansible INFO| ok: [R3] => {
+    "msg": "Connecting to R3 (10.1.10.13) with router ID 13.13.13.13"
+}
+2025-01-08 13:19:52,751 p=1620266 u=sushil n=ansible INFO| TASK [Configure OSPF on the router] **************************************************************************************************************************************************************
+2025-01-08 13:19:53,145 p=1620266 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:19:53,147 p=1620266 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:19:53,149 p=1620287 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:19:53,152 p=1620290 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:19:53,159 p=1620266 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:19:53,162 p=1620293 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:19:55,412 p=1620266 u=sushil n=ansible WARNING| [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device
+
+2025-01-08 13:19:55,413 p=1620266 u=sushil n=ansible INFO| changed: [R2]
+2025-01-08 13:19:55,414 p=1620266 u=sushil n=ansible INFO| changed: [R3]
+2025-01-08 13:19:55,428 p=1620266 u=sushil n=ansible INFO| changed: [R1]
+2025-01-08 13:19:55,430 p=1620266 u=sushil n=ansible INFO| PLAY RECAP ***************************************************************************************************************************************************************************************
+2025-01-08 13:19:55,430 p=1620266 u=sushil n=ansible INFO| R1                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:19:55,431 p=1620266 u=sushil n=ansible INFO| R2                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:19:55,431 p=1620266 u=sushil n=ansible INFO| R3                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:19:55,530 p=1620287 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:19:55,530 p=1620290 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:19:55,530 p=1620293 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:00,115 p=1620387 u=sushil n=ansible INFO| PLAY [Configure OSPF] ****************************************************************************************************************************************************************************
+2025-01-08 13:20:00,121 p=1620387 u=sushil n=ansible INFO| TASK [Debug connection details] ******************************************************************************************************************************************************************
+2025-01-08 13:20:00,158 p=1620387 u=sushil n=ansible INFO| ok: [R1] => {
+    "msg": "Connecting to R1 (10.1.10.11) with router ID 11.11.11.11"
+}
+2025-01-08 13:20:00,162 p=1620387 u=sushil n=ansible INFO| ok: [R2] => {
+    "msg": "Connecting to R2 (10.1.10.12) with router ID 12.12.12.12"
+}
+2025-01-08 13:20:00,162 p=1620387 u=sushil n=ansible INFO| ok: [R3] => {
+    "msg": "Connecting to R3 (10.1.10.13) with router ID 13.13.13.13"
+}
+2025-01-08 13:20:00,163 p=1620387 u=sushil n=ansible INFO| TASK [Configure OSPF on the router] **************************************************************************************************************************************************************
+2025-01-08 13:20:00,542 p=1620387 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:00,543 p=1620387 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:00,544 p=1620387 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:00,547 p=1620414 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:00,547 p=1620413 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:00,549 p=1620417 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:02,391 p=1620387 u=sushil n=ansible INFO| fatal: [R3]: FAILED! => {"changed": false, "module_stderr": "router-id 13.13.13.13\r\nrouter-id 13.13.13.13\r\n      ^\r\n% Invalid input detected at '^' marker.\r\n\r\nR3(config)#", "module_stdout": "", "msg": "MODULE FAILURE: No start of json char found\nSee stdout/stderr for the exact error"}
+2025-01-08 13:20:02,392 p=1620387 u=sushil n=ansible INFO| fatal: [R2]: FAILED! => {"changed": false, "module_stderr": "router-id 12.12.12.12\r\nrouter-id 12.12.12.12\r\n      ^\r\n% Invalid input detected at '^' marker.\r\n\r\nR2(config)#", "module_stdout": "", "msg": "MODULE FAILURE: No start of json char found\nSee stdout/stderr for the exact error"}
+2025-01-08 13:20:02,412 p=1620387 u=sushil n=ansible INFO| fatal: [R1]: FAILED! => {"changed": false, "module_stderr": "router-id 11.11.11.11\r\nrouter-id 11.11.11.11\r\n      ^\r\n% Invalid input detected at '^' marker.\r\n\r\nR1(config)#", "module_stdout": "", "msg": "MODULE FAILURE: No start of json char found\nSee stdout/stderr for the exact error"}
+2025-01-08 13:20:02,416 p=1620387 u=sushil n=ansible INFO| PLAY RECAP ***************************************************************************************************************************************************************************************
+2025-01-08 13:20:02,416 p=1620387 u=sushil n=ansible INFO| R1                         : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:02,416 p=1620387 u=sushil n=ansible INFO| R2                         : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:02,416 p=1620387 u=sushil n=ansible INFO| R3                         : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:02,514 p=1620417 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:02,516 p=1620413 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:02,515 p=1620414 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:26,363 p=1620623 u=sushil n=ansible INFO| PLAY [Configure OSPF] ****************************************************************************************************************************************************************************
+2025-01-08 13:20:26,367 p=1620623 u=sushil n=ansible INFO| TASK [Debug connection details] ******************************************************************************************************************************************************************
+2025-01-08 13:20:26,405 p=1620623 u=sushil n=ansible INFO| ok: [R1] => {
+    "msg": "Connecting to R1 (10.1.10.11) with router ID 11.11.11.11"
+}
+2025-01-08 13:20:26,411 p=1620623 u=sushil n=ansible INFO| ok: [R2] => {
+    "msg": "Connecting to R2 (10.1.10.12) with router ID 12.12.12.12"
+}
+2025-01-08 13:20:26,417 p=1620623 u=sushil n=ansible INFO| ok: [R3] => {
+    "msg": "Connecting to R3 (10.1.10.13) with router ID 13.13.13.13"
+}
+2025-01-08 13:20:26,418 p=1620623 u=sushil n=ansible INFO| TASK [Configure OSPF on the router] **************************************************************************************************************************************************************
+2025-01-08 13:20:26,789 p=1620623 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:26,790 p=1620623 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:26,793 p=1620654 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:26,795 p=1620655 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:26,816 p=1620623 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:26,820 p=1620658 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:29,045 p=1620623 u=sushil n=ansible WARNING| [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device
+
+2025-01-08 13:20:29,045 p=1620623 u=sushil n=ansible INFO| changed: [R2]
+2025-01-08 13:20:29,047 p=1620623 u=sushil n=ansible INFO| changed: [R1]
+2025-01-08 13:20:29,078 p=1620623 u=sushil n=ansible INFO| changed: [R3]
+2025-01-08 13:20:29,081 p=1620623 u=sushil n=ansible INFO| PLAY RECAP ***************************************************************************************************************************************************************************************
+2025-01-08 13:20:29,081 p=1620623 u=sushil n=ansible INFO| R1                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:29,081 p=1620623 u=sushil n=ansible INFO| R2                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:29,081 p=1620623 u=sushil n=ansible INFO| R3                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:29,180 p=1620654 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:29,180 p=1620655 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:29,182 p=1620658 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:32,919 p=1620746 u=sushil n=ansible INFO| PLAY [Configure OSPF] ****************************************************************************************************************************************************************************
+2025-01-08 13:20:32,924 p=1620746 u=sushil n=ansible INFO| TASK [Debug connection details] ******************************************************************************************************************************************************************
+2025-01-08 13:20:32,961 p=1620746 u=sushil n=ansible INFO| ok: [R1] => {
+    "msg": "Connecting to R1 (10.1.10.11) with router ID 11.11.11.11"
+}
+2025-01-08 13:20:32,962 p=1620746 u=sushil n=ansible INFO| ok: [R2] => {
+    "msg": "Connecting to R2 (10.1.10.12) with router ID 12.12.12.12"
+}
+2025-01-08 13:20:32,969 p=1620746 u=sushil n=ansible INFO| ok: [R3] => {
+    "msg": "Connecting to R3 (10.1.10.13) with router ID 13.13.13.13"
+}
+2025-01-08 13:20:32,971 p=1620746 u=sushil n=ansible INFO| TASK [Configure OSPF on the router] **************************************************************************************************************************************************************
+2025-01-08 13:20:33,343 p=1620746 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:33,347 p=1620768 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:33,347 p=1620746 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:33,354 p=1620771 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:33,360 p=1620746 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:33,364 p=1620774 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:35,180 p=1620746 u=sushil n=ansible INFO| fatal: [R3]: FAILED! => {"changed": false, "module_stderr": "router-id 13.13.13.13\r\nrouter-id 13.13.13.13\r\n      ^\r\n% Invalid input detected at '^' marker.\r\n\r\nR3(config)#", "module_stdout": "", "msg": "MODULE FAILURE: No start of json char found\nSee stdout/stderr for the exact error"}
+2025-01-08 13:20:35,203 p=1620746 u=sushil n=ansible INFO| fatal: [R1]: FAILED! => {"changed": false, "module_stderr": "router-id 11.11.11.11\r\nrouter-id 11.11.11.11\r\n      ^\r\n% Invalid input detected at '^' marker.\r\n\r\nR1(config)#", "module_stdout": "", "msg": "MODULE FAILURE: No start of json char found\nSee stdout/stderr for the exact error"}
+2025-01-08 13:20:35,207 p=1620746 u=sushil n=ansible INFO| fatal: [R2]: FAILED! => {"changed": false, "module_stderr": "router-id 12.12.12.12\r\nrouter-id 12.12.12.12\r\n      ^\r\n% Invalid input detected at '^' marker.\r\n\r\nR2(config)#", "module_stdout": "", "msg": "MODULE FAILURE: No start of json char found\nSee stdout/stderr for the exact error"}
+2025-01-08 13:20:35,209 p=1620746 u=sushil n=ansible INFO| PLAY RECAP ***************************************************************************************************************************************************************************************
+2025-01-08 13:20:35,209 p=1620746 u=sushil n=ansible INFO| R1                         : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:35,210 p=1620746 u=sushil n=ansible INFO| R2                         : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:35,210 p=1620746 u=sushil n=ansible INFO| R3                         : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:35,309 p=1620768 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:35,309 p=1620771 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:35,310 p=1620774 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:37,474 p=1620821 u=sushil n=ansible INFO| PLAY [Configure OSPF] ****************************************************************************************************************************************************************************
+2025-01-08 13:20:37,478 p=1620821 u=sushil n=ansible INFO| TASK [Debug connection details] ******************************************************************************************************************************************************************
+2025-01-08 13:20:37,516 p=1620821 u=sushil n=ansible INFO| ok: [R1] => {
+    "msg": "Connecting to R1 (10.1.10.11) with router ID 11.11.11.11"
+}
+2025-01-08 13:20:37,524 p=1620821 u=sushil n=ansible INFO| ok: [R2] => {
+    "msg": "Connecting to R2 (10.1.10.12) with router ID 12.12.12.12"
+}
+2025-01-08 13:20:37,529 p=1620821 u=sushil n=ansible INFO| ok: [R3] => {
+    "msg": "Connecting to R3 (10.1.10.13) with router ID 13.13.13.13"
+}
+2025-01-08 13:20:37,530 p=1620821 u=sushil n=ansible INFO| TASK [Configure OSPF on the router] **************************************************************************************************************************************************************
+2025-01-08 13:20:37,946 p=1620821 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:37,946 p=1620821 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:37,946 p=1620821 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:37,950 p=1620848 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:37,950 p=1620842 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:37,951 p=1620849 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:40,223 p=1620821 u=sushil n=ansible WARNING| [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device
+
+2025-01-08 13:20:40,223 p=1620821 u=sushil n=ansible INFO| changed: [R3]
+2025-01-08 13:20:40,230 p=1620821 u=sushil n=ansible INFO| changed: [R2]
+2025-01-08 13:20:40,286 p=1620821 u=sushil n=ansible INFO| changed: [R1]
+2025-01-08 13:20:40,291 p=1620821 u=sushil n=ansible INFO| PLAY RECAP ***************************************************************************************************************************************************************************************
+2025-01-08 13:20:40,291 p=1620821 u=sushil n=ansible INFO| R1                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:40,291 p=1620821 u=sushil n=ansible INFO| R2                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:40,291 p=1620821 u=sushil n=ansible INFO| R3                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:40,389 p=1620848 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:40,390 p=1620849 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:40,390 p=1620842 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:48,185 p=1620967 u=sushil n=ansible INFO| PLAY [Configure OSPF] ****************************************************************************************************************************************************************************
+2025-01-08 13:20:48,191 p=1620967 u=sushil n=ansible INFO| TASK [Debug connection details] ******************************************************************************************************************************************************************
+2025-01-08 13:20:48,231 p=1620967 u=sushil n=ansible INFO| ok: [R1] => {
+    "msg": "Connecting to R1 (10.1.10.11) with router ID 11.11.11.11"
+}
+2025-01-08 13:20:48,233 p=1620967 u=sushil n=ansible INFO| ok: [R2] => {
+    "msg": "Connecting to R2 (10.1.10.12) with router ID 12.12.12.12"
+}
+2025-01-08 13:20:48,237 p=1620967 u=sushil n=ansible INFO| ok: [R3] => {
+    "msg": "Connecting to R3 (10.1.10.13) with router ID 13.13.13.13"
+}
+2025-01-08 13:20:48,238 p=1620967 u=sushil n=ansible INFO| TASK [Configure OSPF on the router] **************************************************************************************************************************************************************
+2025-01-08 13:20:48,625 p=1620967 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:48,631 p=1620995 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:48,631 p=1620967 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:48,635 p=1620998 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:48,640 p=1620967 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:48,646 p=1621001 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:50,468 p=1620967 u=sushil n=ansible INFO| fatal: [R2]: FAILED! => {"changed": false, "module_stderr": "router-id 12.12.12.12\r\nrouter-id 12.12.12.12\r\n      ^\r\n% Invalid input detected at '^' marker.\r\n\r\nR2(config)#", "module_stdout": "", "msg": "MODULE FAILURE: No start of json char found\nSee stdout/stderr for the exact error"}
+2025-01-08 13:20:50,471 p=1620967 u=sushil n=ansible INFO| fatal: [R3]: FAILED! => {"changed": false, "module_stderr": "router-id 13.13.13.13\r\nrouter-id 13.13.13.13\r\n      ^\r\n% Invalid input detected at '^' marker.\r\n\r\nR3(config)#", "module_stdout": "", "msg": "MODULE FAILURE: No start of json char found\nSee stdout/stderr for the exact error"}
+2025-01-08 13:20:50,476 p=1620967 u=sushil n=ansible INFO| fatal: [R1]: FAILED! => {"changed": false, "module_stderr": "router-id 11.11.11.11\r\nrouter-id 11.11.11.11\r\n      ^\r\n% Invalid input detected at '^' marker.\r\n\r\nR1(config)#", "module_stdout": "", "msg": "MODULE FAILURE: No start of json char found\nSee stdout/stderr for the exact error"}
+2025-01-08 13:20:50,480 p=1620967 u=sushil n=ansible INFO| PLAY RECAP ***************************************************************************************************************************************************************************************
+2025-01-08 13:20:50,480 p=1620967 u=sushil n=ansible INFO| R1                         : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:50,480 p=1620967 u=sushil n=ansible INFO| R2                         : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:50,480 p=1620967 u=sushil n=ansible INFO| R3                         : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:50,578 p=1620998 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:50,580 p=1621001 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:50,581 p=1620995 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:52,102 p=1621045 u=sushil n=ansible INFO| PLAY [Configure OSPF] ****************************************************************************************************************************************************************************
+2025-01-08 13:20:52,106 p=1621045 u=sushil n=ansible INFO| TASK [Debug connection details] ******************************************************************************************************************************************************************
+2025-01-08 13:20:52,147 p=1621045 u=sushil n=ansible INFO| ok: [R1] => {
+    "msg": "Connecting to R1 (10.1.10.11) with router ID 11.11.11.11"
+}
+2025-01-08 13:20:52,151 p=1621045 u=sushil n=ansible INFO| ok: [R2] => {
+    "msg": "Connecting to R2 (10.1.10.12) with router ID 12.12.12.12"
+}
+2025-01-08 13:20:52,152 p=1621045 u=sushil n=ansible INFO| ok: [R3] => {
+    "msg": "Connecting to R3 (10.1.10.13) with router ID 13.13.13.13"
+}
+2025-01-08 13:20:52,152 p=1621045 u=sushil n=ansible INFO| TASK [Configure OSPF on the router] **************************************************************************************************************************************************************
+2025-01-08 13:20:52,547 p=1621045 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:52,549 p=1621045 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:52,549 p=1621045 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:20:52,551 p=1621068 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:52,553 p=1621074 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:52,553 p=1621073 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:20:54,813 p=1621045 u=sushil n=ansible WARNING| [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device
+
+2025-01-08 13:20:54,813 p=1621045 u=sushil n=ansible INFO| changed: [R3]
+2025-01-08 13:20:54,827 p=1621045 u=sushil n=ansible INFO| changed: [R2]
+2025-01-08 13:20:54,844 p=1621045 u=sushil n=ansible INFO| changed: [R1]
+2025-01-08 13:20:54,847 p=1621045 u=sushil n=ansible INFO| PLAY RECAP ***************************************************************************************************************************************************************************************
+2025-01-08 13:20:54,847 p=1621045 u=sushil n=ansible INFO| R1                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:54,847 p=1621045 u=sushil n=ansible INFO| R2                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:54,847 p=1621045 u=sushil n=ansible INFO| R3                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:20:54,946 p=1621074 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:54,946 p=1621068 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:20:54,947 p=1621073 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:21:15,612 p=1621307 u=sushil n=ansible INFO| PLAY [Verify OSPF Neighborship] ******************************************************************************************************************************************************************
+2025-01-08 13:21:15,615 p=1621307 u=sushil n=ansible INFO| TASK [Check OSPF Neighbors] **********************************************************************************************************************************************************************
+2025-01-08 13:21:16,001 p=1621307 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:21:16,001 p=1621307 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:21:16,007 p=1621334 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:21:16,007 p=1621335 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:21:16,019 p=1621307 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:21:16,026 p=1621338 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:21:17,380 p=1621307 u=sushil n=ansible INFO| ok: [R2]
+2025-01-08 13:21:17,380 p=1621307 u=sushil n=ansible INFO| ok: [R1]
+2025-01-08 13:21:17,401 p=1621307 u=sushil n=ansible INFO| ok: [R3]
+2025-01-08 13:21:17,403 p=1621307 u=sushil n=ansible INFO| TASK [Display OSPF Neighbor Output] **************************************************************************************************************************************************************
+2025-01-08 13:21:17,441 p=1621307 u=sushil n=ansible INFO| ok: [R1] => {
+    "msg": "OSPF Neighbors for R1: [['Neighbor ID     Pri   State           Dead Time   Address         Interface', '13.13.13.13       1   2WAY/DROTHER    00:00:36    172.16.40.13    GigabitEthernet3', '12.12.12.12       1   2WAY/DROTHER    00:00:36    172.16.10.12    GigabitEthernet1']]"
+}
+2025-01-08 13:21:17,445 p=1621307 u=sushil n=ansible INFO| ok: [R2] => {
+    "msg": "OSPF Neighbors for R2: [['Neighbor ID     Pri   State           Dead Time   Address         Interface', '11.11.11.11       1   2WAY/DROTHER    00:00:35    172.16.10.29    GigabitEthernet1']]"
+}
+2025-01-08 13:21:17,449 p=1621307 u=sushil n=ansible INFO| ok: [R3] => {
+    "msg": "OSPF Neighbors for R3: [['Neighbor ID     Pri   State           Dead Time   Address         Interface', '11.11.11.11       1   2WAY/DROTHER    00:00:36    172.16.40.11    GigabitEthernet3']]"
+}
+2025-01-08 13:21:17,452 p=1621307 u=sushil n=ansible INFO| PLAY RECAP ***************************************************************************************************************************************************************************************
+2025-01-08 13:21:17,452 p=1621307 u=sushil n=ansible INFO| R1                         : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:21:17,452 p=1621307 u=sushil n=ansible INFO| R2                         : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:21:17,452 p=1621307 u=sushil n=ansible INFO| R3                         : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:21:17,550 p=1621335 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:21:17,551 p=1621334 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:21:17,552 p=1621338 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:21:38,037 p=1621564 u=sushil n=ansible INFO| PLAY [Verify SSH Access with CLI Commands] *******************************************************************************************************************************************************
+2025-01-08 13:21:38,043 p=1621564 u=sushil n=ansible INFO| TASK [Run 'show version' on all devices] *********************************************************************************************************************************************************
+2025-01-08 13:21:38,444 p=1621564 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:21:38,444 p=1621564 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:21:38,447 p=1621606 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:21:38,447 p=1621608 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:21:38,469 p=1621564 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 13:21:38,471 p=1621611 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 13:21:39,645 p=1621564 u=sushil n=ansible INFO| ok: [R3]
+2025-01-08 13:21:39,653 p=1621564 u=sushil n=ansible INFO| ok: [R1]
+2025-01-08 13:21:39,670 p=1621564 u=sushil n=ansible INFO| ok: [R2]
+2025-01-08 13:21:39,671 p=1621564 u=sushil n=ansible INFO| TASK [Display output] ****************************************************************************************************************************************************************************
+2025-01-08 13:21:39,709 p=1621564 u=sushil n=ansible INFO| ok: [R1] => {
+    "msg": [
+        "Cisco IOS XE Software, Version 17.03.08a",
+        "Cisco IOS Software [Amsterdam], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 17.3.8a, RELEASE SOFTWARE (fc3)",
+        "Technical Support: http://www.cisco.com/techsupport",
+        "Copyright (c) 1986-2023 by Cisco Systems, Inc.",
+        "Compiled Fri 20-Oct-23 15:48 by mcpre",
+        "",
+        "",
+        "Cisco IOS-XE software, Copyright (c) 2005-2023 by cisco Systems, Inc.",
+        "All rights reserved.  Certain components of Cisco IOS-XE software are",
+        "licensed under the GNU General Public License (\"GPL\") Version 2.0.  The",
+        "software code licensed under GPL Version 2.0 is free software that comes",
+        "with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such",
+        "GPL code under the terms of GPL Version 2.0.  For more details, see the",
+        "documentation or \"License Notice\" file accompanying the IOS-XE software,",
+        "or the applicable URL provided on the flyer accompanying the IOS-XE",
+        "software.",
+        "",
+        "",
+        "ROM: IOS-XE ROMMON",
+        "",
+        "R1 uptime is 2 days, 1 hour, 18 minutes",
+        "Uptime for this control processor is 2 days, 1 hour, 19 minutes",
+        "System returned to ROM by reload",
+        "System image file is \"bootflash:packages.conf\"",
+        "Last reload reason: reload",
+        "",
+        "",
+        "",
+        "This product contains cryptographic features and is subject to United",
+        "States and local country laws governing import, export, transfer and",
+        "use. Delivery of Cisco cryptographic products does not imply",
+        "third-party authority to import, export, distribute or use encryption.",
+        "Importers, exporters, distributors and users are responsible for",
+        "compliance with U.S. and local country laws. By using this product you",
+        "agree to comply with applicable laws and regulations. If you are unable",
+        "to comply with U.S. and local laws, return this product immediately.",
+        "",
+        "A summary of U.S. laws governing Cisco cryptographic products may be found at:",
+        "http://www.cisco.com/wwl/export/crypto/tool/stqrg.html",
+        "",
+        "If you require further assistance please contact us by sending email to",
+        "export@cisco.com.",
+        "",
+        "License Level: ax",
+        "License Type: N/A(Smart License Enabled)",
+        "Next reload license Level: ax",
+        "",
+        "The current throughput level is 1000 kbps ",
+        "",
+        "",
+        "Smart Licensing Status: UNREGISTERED/No Licenses in Use",
+        "",
+        "cisco CSR1000V (VXE) processor (revision VXE) with 1104920K/3075K bytes of memory.",
+        "Processor board ID 9KRTX946Z7Z",
+        "Router operating mode: Autonomous",
+        "4 Gigabit Ethernet interfaces",
+        "32768K bytes of non-volatile configuration memory.",
+        "3012036K bytes of physical memory.",
+        "6188032K bytes of virtual hard disk at bootflash:.",
+        "",
+        "Configuration register is 0x2102"
+    ]
+}
+2025-01-08 13:21:39,711 p=1621564 u=sushil n=ansible INFO| ok: [R2] => {
+    "msg": [
+        "Cisco IOS XE Software, Version 17.03.08a",
+        "Cisco IOS Software [Amsterdam], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 17.3.8a, RELEASE SOFTWARE (fc3)",
+        "Technical Support: http://www.cisco.com/techsupport",
+        "Copyright (c) 1986-2023 by Cisco Systems, Inc.",
+        "Compiled Fri 20-Oct-23 15:48 by mcpre",
+        "",
+        "",
+        "Cisco IOS-XE software, Copyright (c) 2005-2023 by cisco Systems, Inc.",
+        "All rights reserved.  Certain components of Cisco IOS-XE software are",
+        "licensed under the GNU General Public License (\"GPL\") Version 2.0.  The",
+        "software code licensed under GPL Version 2.0 is free software that comes",
+        "with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such",
+        "GPL code under the terms of GPL Version 2.0.  For more details, see the",
+        "documentation or \"License Notice\" file accompanying the IOS-XE software,",
+        "or the applicable URL provided on the flyer accompanying the IOS-XE",
+        "software.",
+        "",
+        "",
+        "ROM: IOS-XE ROMMON",
+        "",
+        "R2 uptime is 2 days, 1 hour, 17 minutes",
+        "Uptime for this control processor is 2 days, 1 hour, 18 minutes",
+        "System returned to ROM by reload",
+        "System image file is \"boot:packages.conf\"",
+        "Last reload reason: reload",
+        "",
+        "",
+        "",
+        "This product contains cryptographic features and is subject to United",
+        "States and local country laws governing import, export, transfer and",
+        "use. Delivery of Cisco cryptographic products does not imply",
+        "third-party authority to import, export, distribute or use encryption.",
+        "Importers, exporters, distributors and users are responsible for",
+        "compliance with U.S. and local country laws. By using this product you",
+        "agree to comply with applicable laws and regulations. If you are unable",
+        "to comply with U.S. and local laws, return this product immediately.",
+        "",
+        "A summary of U.S. laws governing Cisco cryptographic products may be found at:",
+        "http://www.cisco.com/wwl/export/crypto/tool/stqrg.html",
+        "",
+        "If you require further assistance please contact us by sending email to",
+        "export@cisco.com.",
+        "",
+        "License Level: ax",
+        "License Type: N/A(Smart License Enabled)",
+        "Next reload license Level: ax",
+        "",
+        "The current throughput level is 1000 kbps ",
+        "",
+        "",
+        "Smart Licensing Status: UNREGISTERED/No Licenses in Use",
+        "",
+        "cisco CSR1000V (VXE) processor (revision VXE) with 2071576K/3075K bytes of memory.",
+        "Processor board ID 9EC8PK32VDW",
+        "Router operating mode: Autonomous",
+        "4 Gigabit Ethernet interfaces",
+        "32768K bytes of non-volatile configuration memory.",
+        "3978408K bytes of physical memory.",
+        "6188032K bytes of virtual hard disk at bootflash:.",
+        "",
+        "Configuration register is 0x2102"
+    ]
+}
+2025-01-08 13:21:39,715 p=1621564 u=sushil n=ansible INFO| ok: [R3] => {
+    "msg": [
+        "Cisco IOS XE Software, Version 17.03.08a",
+        "Cisco IOS Software [Amsterdam], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 17.3.8a, RELEASE SOFTWARE (fc3)",
+        "Technical Support: http://www.cisco.com/techsupport",
+        "Copyright (c) 1986-2023 by Cisco Systems, Inc.",
+        "Compiled Fri 20-Oct-23 15:48 by mcpre",
+        "",
+        "",
+        "Cisco IOS-XE software, Copyright (c) 2005-2023 by cisco Systems, Inc.",
+        "All rights reserved.  Certain components of Cisco IOS-XE software are",
+        "licensed under the GNU General Public License (\"GPL\") Version 2.0.  The",
+        "software code licensed under GPL Version 2.0 is free software that comes",
+        "with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such",
+        "GPL code under the terms of GPL Version 2.0.  For more details, see the",
+        "documentation or \"License Notice\" file accompanying the IOS-XE software,",
+        "or the applicable URL provided on the flyer accompanying the IOS-XE",
+        "software.",
+        "",
+        "",
+        "ROM: IOS-XE ROMMON",
+        "",
+        "R3 uptime is 1 day, 2 hours, 38 minutes",
+        "Uptime for this control processor is 1 day, 2 hours, 39 minutes",
+        "System returned to ROM by reload",
+        "System image file is \"bootflash:packages.conf\"",
+        "Last reload reason: reload",
+        "",
+        "",
+        "",
+        "This product contains cryptographic features and is subject to United",
+        "States and local country laws governing import, export, transfer and",
+        "use. Delivery of Cisco cryptographic products does not imply",
+        "third-party authority to import, export, distribute or use encryption.",
+        "Importers, exporters, distributors and users are responsible for",
+        "compliance with U.S. and local country laws. By using this product you",
+        "agree to comply with applicable laws and regulations. If you are unable",
+        "to comply with U.S. and local laws, return this product immediately.",
+        "",
+        "A summary of U.S. laws governing Cisco cryptographic products may be found at:",
+        "http://www.cisco.com/wwl/export/crypto/tool/stqrg.html",
+        "",
+        "If you require further assistance please contact us by sending email to",
+        "export@cisco.com.",
+        "",
+        "License Level: ax",
+        "License Type: N/A(Smart License Enabled)",
+        "Next reload license Level: ax",
+        "",
+        "The current throughput level is 1000 kbps ",
+        "",
+        "",
+        "Smart Licensing Status: UNREGISTERED/No Licenses in Use",
+        "",
+        "cisco CSR1000V (VXE) processor (revision VXE) with 2071576K/3075K bytes of memory.",
+        "Processor board ID 908TQ6G7S5N",
+        "Router operating mode: Autonomous",
+        "4 Gigabit Ethernet interfaces",
+        "32768K bytes of non-volatile configuration memory.",
+        "3978424K bytes of physical memory.",
+        "6188032K bytes of virtual hard disk at bootflash:.",
+        "",
+        "Configuration register is 0x2102"
+    ]
+}
+2025-01-08 13:21:39,718 p=1621564 u=sushil n=ansible INFO| PLAY RECAP ***************************************************************************************************************************************************************************************
+2025-01-08 13:21:39,718 p=1621564 u=sushil n=ansible INFO| R1                         : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:21:39,718 p=1621564 u=sushil n=ansible INFO| R2                         : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:21:39,718 p=1621564 u=sushil n=ansible INFO| R3                         : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 13:21:39,816 p=1621606 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:21:39,817 p=1621608 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 13:21:39,819 p=1621611 u=sushil n=ansible INFO| shutdown complete

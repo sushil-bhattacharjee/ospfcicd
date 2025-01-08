@@ -31,20 +31,13 @@ build:
   stage: build
   script:
     - echo "Verifying SSH access with CLI commands"
-    - ansible all -i inventory.yml -m ansible.netcommon.cli_command -a "command=show version" -vvv
+    - ansible-playbook verify_ssh.yml -i inventory.yml -vvv
     - echo "Configuring OSPF for R1 and R2"
-    - ansible-playbook configure_ospf.yml -i inventory.yml --limit R1,R2 -vvv
+    - ansible-playbook configure_ospf.yml -i inventory.yml -vvv
 
 test:
   stage: test
   script:
     - echo "Verifying OSPF Neighborship between R1 and R2"
-    - ansible-playbook verify_ospf.yml -i inventory.yml --limit R1,R2 -vvv
+    - ansible-playbook verify_ospf.yml -i inventory.yml 
 
-deploy:
-  stage: deploy
-  script:
-    - echo "Configuring OSPF for R2 and R3"
-    - ansible-playbook configure_ospf.yml -i inventory.yml --limit R2,R3 -vvv
-    - echo "Verifying OSPF Neighborship between R2 and R3"
-    - ansible-playbook verify_ospf.yml -i inventory.yml --limit R2,R3 -vvv

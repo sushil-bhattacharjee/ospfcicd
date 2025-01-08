@@ -6,8 +6,8 @@
     - name: Run 'show version' on all devices
       ansible.netcommon.cli_command:
         command: show version
-      register: output
+      register: version_output
 
     - name: Display output
       debug:
-        var: output.stdout
+        msg: "{{ version_output.stdout_lines }}"
