@@ -1,3 +1,4 @@
+---
 - name: Verify OSPF Neighborship
   hosts: all
   gather_facts: no
@@ -10,4 +11,4 @@
 
     - name: Display OSPF Neighbor Output
       debug:
-        msg: "{{ ospf_output.stdout_lines }}"
+        msg: "OSPF Neighbors for {{ inventory_hostname }}: {{ ospf_output.stdout_lines }}"
