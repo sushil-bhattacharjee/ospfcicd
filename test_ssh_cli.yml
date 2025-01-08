@@ -1,0 +1,13 @@
+---
+- name: Verify SSH Access with CLI Commands
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Run 'show version' on all devices
+      ansible.netcommon.cli_command:
+        command: show version
+      register: output
+
+    - name: Display output
+      debug:
+        var: output.stdout
