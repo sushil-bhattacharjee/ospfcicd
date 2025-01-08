@@ -18,8 +18,8 @@ before_script:
   # Activate the virtual environment
   - source .venv/bin/activate
   # Install required Python packages
-  - pip3 install --upgrade pip3
-  - pip3 instal -r requirements.txt
+  - pip install --upgrade pip
+  - pip instal -r requirements.txt
 
 connection_test:
   stage: connection_test
