@@ -676,3 +676,252 @@ deprecation_warnings=False in ansible.cfg.
 2025-01-08 21:57:01,339 p=1657718 u=sushil n=ansible INFO| R2                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2025-01-08 21:57:01,442 p=1657749 u=sushil n=ansible INFO| shutdown complete
 2025-01-08 21:57:01,442 p=1657752 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 22:50:53,868 p=792998 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 22:50:53,881 p=792998 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 22:50:53,882 p=792998 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 22:50:54,021 p=792998 u=sushil n=ansible INFO| R1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-01-08 22:50:54,047 p=792998 u=sushil n=ansible INFO| R3 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-01-08 22:50:54,048 p=792998 u=sushil n=ansible INFO| R2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-01-08 22:50:54,153 p=793022 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 22:50:54,153 p=793020 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 22:50:54,153 p=793021 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 22:51:06,873 p=793181 u=sushil n=ansible INFO| ansible-playbook [core 2.18.1]
+  config file = /home/sushil/ospfcicd/ansible.cfg
+  configured module search path = ['/home/sushil/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/sushil/ospfcicd/.Vospfcicd/lib/python3.12/site-packages/ansible
+  ansible collection location = /home/sushil/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/sushil/ospfcicd/.Vospfcicd/bin/ansible-playbook
+  python version = 3.12.3 (main, Nov  6 2024, 18:32:19) [GCC 13.2.0] (/home/sushil/ospfcicd/.Vospfcicd/bin/python3.12)
+  jinja version = 3.1.5
+  libyaml = True
+2025-01-08 22:51:06,873 p=793181 u=sushil n=ansible INFO| Using /home/sushil/ospfcicd/ansible.cfg as config file
+2025-01-08 22:51:06,925 p=793181 u=sushil n=ansible INFO| host_list declined parsing /home/sushil/ospfcicd/inventory.yml as it did not pass its verify_file() method
+2025-01-08 22:51:06,925 p=793181 u=sushil n=ansible INFO| script declined parsing /home/sushil/ospfcicd/inventory.yml as it did not pass its verify_file() method
+2025-01-08 22:51:06,927 p=793181 u=sushil n=ansible INFO| Parsed /home/sushil/ospfcicd/inventory.yml inventory source with yaml plugin
+2025-01-08 22:51:06,956 p=793181 u=sushil n=ansible INFO| redirecting (type: modules) ansible.builtin.ios_config to cisco.ios.ios_config
+2025-01-08 22:51:06,971 p=793181 u=sushil n=ansible INFO| Skipping callback 'default', as we already have a stdout callback.
+2025-01-08 22:51:06,971 p=793181 u=sushil n=ansible INFO| Skipping callback 'minimal', as we already have a stdout callback.
+2025-01-08 22:51:06,971 p=793181 u=sushil n=ansible INFO| Skipping callback 'oneline', as we already have a stdout callback.
+2025-01-08 22:51:06,971 p=793181 u=sushil n=ansible INFO| PLAYBOOK: configure_ospf.yml *********************************************************************************************************************************************************
+2025-01-08 22:51:06,971 p=793181 u=sushil n=ansible INFO| 1 plays in configure_ospf.yml
+2025-01-08 22:51:06,972 p=793181 u=sushil n=ansible INFO| PLAY [Configure OSPF] ****************************************************************************************************************************************************************
+2025-01-08 22:51:06,976 p=793181 u=sushil n=ansible INFO| TASK [Debug connection details] ******************************************************************************************************************************************************
+2025-01-08 22:51:06,976 p=793181 u=sushil n=ansible INFO| task path: /home/sushil/ospfcicd/configure_ospf.yml:6
+2025-01-08 22:51:06,986 p=793181 u=sushil n=ansible INFO| redirecting (type: connection) ansible.builtin.network_cli to ansible.netcommon.network_cli
+2025-01-08 22:51:06,988 p=793181 u=sushil n=ansible INFO| redirecting (type: connection) ansible.builtin.network_cli to ansible.netcommon.network_cli
+2025-01-08 22:51:07,022 p=793181 u=sushil n=ansible INFO| ok: [R1] => {
+    "msg": "Connecting to R1 (10.1.10.11) with router ID 11.11.11.11"
+}
+2025-01-08 22:51:07,025 p=793181 u=sushil n=ansible INFO| ok: [R2] => {
+    "msg": "Connecting to R2 (10.1.10.12) with router ID 12.12.12.12"
+}
+2025-01-08 22:51:07,026 p=793181 u=sushil n=ansible INFO| TASK [Configure OSPF on the router] **************************************************************************************************************************************************
+2025-01-08 22:51:07,026 p=793181 u=sushil n=ansible INFO| task path: /home/sushil/ospfcicd/configure_ospf.yml:10
+2025-01-08 22:51:07,033 p=793181 u=sushil n=ansible INFO| redirecting (type: connection) ansible.builtin.network_cli to ansible.netcommon.network_cli
+2025-01-08 22:51:07,036 p=793181 u=sushil n=ansible INFO| redirecting (type: connection) ansible.builtin.network_cli to ansible.netcommon.network_cli
+2025-01-08 22:51:07,062 p=793181 u=sushil n=ansible INFO| redirecting (type: modules) ansible.builtin.ios_config to cisco.ios.ios_config
+2025-01-08 22:51:07,062 p=793181 u=sushil n=ansible INFO| redirecting (type: modules) ansible.builtin.ios_config to cisco.ios.ios_config
+2025-01-08 22:51:07,062 p=793181 u=sushil n=ansible INFO| redirecting (type: action) ansible.builtin.ios to cisco.ios.ios
+2025-01-08 22:51:07,062 p=793181 u=sushil n=ansible INFO| redirecting (type: action) ansible.builtin.ios to cisco.ios.ios
+2025-01-08 22:51:07,062 p=793181 u=sushil n=ansible INFO| redirecting (type: action) ansible.builtin.ios to cisco.ios.ios
+2025-01-08 22:51:07,062 p=793181 u=sushil n=ansible INFO| redirecting (type: action) ansible.builtin.ios to cisco.ios.ios
+2025-01-08 22:51:07,303 p=793208 u=sushil n=ansible INFO| redirecting (type: connection) ansible.builtin.network_cli to ansible.netcommon.network_cli
+2025-01-08 22:51:07,303 p=793209 u=sushil n=ansible INFO| redirecting (type: connection) ansible.builtin.network_cli to ansible.netcommon.network_cli
+2025-01-08 22:51:07,362 p=793181 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 22:51:07,363 p=793181 u=sushil n=ansible INFO| redirecting (type: action) ansible.builtin.ios to cisco.ios.ios
+2025-01-08 22:51:07,363 p=793181 u=sushil n=ansible INFO| redirecting (type: modules) ansible.builtin.ios_config to cisco.ios.ios_config
+2025-01-08 22:51:07,363 p=793181 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 22:51:07,363 p=793181 u=sushil n=ansible INFO| redirecting (type: action) ansible.builtin.ios to cisco.ios.ios
+2025-01-08 22:51:07,366 p=793208 u=sushil n=ansible INFO| <10.1.10.12> USING PYLIBSSH VERSION 1.2.2
+2025-01-08 22:51:07,366 p=793208 u=sushil n=ansible INFO| <10.1.10.12> ESTABLISH LIBSSH CONNECTION FOR USER: cisco on PORT 22 TO 10.1.10.12
+2025-01-08 22:51:07,366 p=793208 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 22:51:07,366 p=793181 u=sushil n=ansible INFO| redirecting (type: modules) ansible.builtin.ios_config to cisco.ios.ios_config
+2025-01-08 22:51:07,366 p=793209 u=sushil n=ansible INFO| <10.1.10.11> USING PYLIBSSH VERSION 1.2.2
+2025-01-08 22:51:07,366 p=793209 u=sushil n=ansible INFO| <10.1.10.11> ESTABLISH LIBSSH CONNECTION FOR USER: cisco on PORT 22 TO 10.1.10.11
+2025-01-08 22:51:07,366 p=793209 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 22:51:07,907 p=793208 u=sushil n=ansible INFO| ssh connection is OK: <pylibsshext.session.Session object at 0x7504d3c5a2f0>
+2025-01-08 22:51:07,922 p=793209 u=sushil n=ansible INFO| ssh connection is OK: <pylibsshext.session.Session object at 0x796320f5df80>
+2025-01-08 22:51:12,543 p=793181 u=sushil n=ansible WARNING| [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device
+
+2025-01-08 22:51:12,543 p=793181 u=sushil n=ansible INFO| changed: [R1] => {
+    "banners": {},
+    "changed": true,
+    "commands": [
+        "no router ospf 1",
+        "router ospf 1",
+        "router-id 11.11.11.11",
+        "network 0.0.0.0 0.0.0.0 area 0"
+    ],
+    "invocation": {
+        "module_args": {
+            "after": null,
+            "backup": false,
+            "backup_options": null,
+            "before": null,
+            "defaults": false,
+            "diff_against": null,
+            "diff_ignore_lines": null,
+            "intended_config": null,
+            "lines": [
+                "no router ospf 1",
+                "router ospf 1",
+                "router-id 11.11.11.11",
+                "network 0.0.0.0 0.0.0.0 area 0"
+            ],
+            "match": "line",
+            "multiline_delimiter": "@",
+            "parents": null,
+            "replace": "line",
+            "running_config": null,
+            "save_when": "never",
+            "src": null
+        }
+    },
+    "updates": [
+        "no router ospf 1",
+        "router ospf 1",
+        "router-id 11.11.11.11",
+        "network 0.0.0.0 0.0.0.0 area 0"
+    ]
+}
+2025-01-08 22:51:12,544 p=793181 u=sushil n=ansible INFO| changed: [R2] => {
+    "banners": {},
+    "changed": true,
+    "commands": [
+        "no router ospf 1",
+        "router ospf 1",
+        "router-id 12.12.12.12",
+        "network 0.0.0.0 0.0.0.0 area 0"
+    ],
+    "invocation": {
+        "module_args": {
+            "after": null,
+            "backup": false,
+            "backup_options": null,
+            "before": null,
+            "defaults": false,
+            "diff_against": null,
+            "diff_ignore_lines": null,
+            "intended_config": null,
+            "lines": [
+                "no router ospf 1",
+                "router ospf 1",
+                "router-id 12.12.12.12",
+                "network 0.0.0.0 0.0.0.0 area 0"
+            ],
+            "match": "line",
+            "multiline_delimiter": "@",
+            "parents": null,
+            "replace": "line",
+            "running_config": null,
+            "save_when": "never",
+            "src": null
+        }
+    },
+    "updates": [
+        "no router ospf 1",
+        "router ospf 1",
+        "router-id 12.12.12.12",
+        "network 0.0.0.0 0.0.0.0 area 0"
+    ]
+}
+2025-01-08 22:51:12,545 p=793181 u=sushil n=ansible INFO| PLAY RECAP ***************************************************************************************************************************************************************************
+2025-01-08 22:51:12,546 p=793181 u=sushil n=ansible INFO| R1                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 22:51:12,546 p=793181 u=sushil n=ansible INFO| R2                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 22:51:12,649 p=793208 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 22:51:12,649 p=793209 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 22:51:28,016 p=793387 u=sushil n=ansible INFO| PLAY [Verify OSPF Neighborship] ******************************************************************************************************************************************************
+2025-01-08 22:51:28,020 p=793387 u=sushil n=ansible INFO| TASK [Check OSPF Neighbors] **********************************************************************************************************************************************************
+2025-01-08 22:51:28,326 p=793387 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 22:51:28,326 p=793387 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 22:51:28,330 p=793404 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 22:51:28,330 p=793403 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 22:51:30,959 p=793387 u=sushil n=ansible INFO| ok: [R1]
+2025-01-08 22:51:30,990 p=793387 u=sushil n=ansible INFO| ok: [R2]
+2025-01-08 22:51:30,991 p=793387 u=sushil n=ansible INFO| TASK [Display OSPF Neighbor Output] **************************************************************************************************************************************************
+2025-01-08 22:51:31,020 p=793387 u=sushil n=ansible INFO| ok: [R1] => {
+    "msg": "OSPF Neighbors for R1: [['Neighbor ID     Pri   State           Dead Time   Address         Interface', '12.12.12.12       1   2WAY/DROTHER    00:00:31    172.16.10.12    GigabitEthernet1']]"
+}
+2025-01-08 22:51:31,025 p=793387 u=sushil n=ansible INFO| ok: [R2] => {
+    "msg": "OSPF Neighbors for R2: [['Neighbor ID     Pri   State           Dead Time   Address         Interface', '11.11.11.11       1   2WAY/DROTHER    00:00:30    172.16.10.29    GigabitEthernet1']]"
+}
+2025-01-08 22:51:31,029 p=793387 u=sushil n=ansible INFO| PLAY RECAP ***************************************************************************************************************************************************************************
+2025-01-08 22:51:31,029 p=793387 u=sushil n=ansible INFO| R1                         : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 22:51:31,029 p=793387 u=sushil n=ansible INFO| R2                         : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 22:51:31,142 p=793404 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 22:51:31,142 p=793403 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 22:51:48,260 p=794004 u=sushil n=ansible INFO| PLAY [Configure OSPF] ****************************************************************************************************************************************************************
+2025-01-08 22:51:48,265 p=794004 u=sushil n=ansible INFO| TASK [Debug connection details] ******************************************************************************************************************************************************
+2025-01-08 22:51:48,296 p=794004 u=sushil n=ansible INFO| ok: [R2] => {
+    "msg": "Connecting to R2 (10.1.10.12) with router ID 12.12.12.12"
+}
+2025-01-08 22:51:48,308 p=794004 u=sushil n=ansible INFO| ok: [R3] => {
+    "msg": "Connecting to R3 (10.1.10.13) with router ID 13.13.13.13"
+}
+2025-01-08 22:51:48,309 p=794004 u=sushil n=ansible INFO| TASK [Configure OSPF on the router] **************************************************************************************************************************************************
+2025-01-08 22:51:48,607 p=794004 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 22:51:48,610 p=794026 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 22:51:48,645 p=794004 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 22:51:48,649 p=794029 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 22:51:52,793 p=794004 u=sushil n=ansible INFO| fatal: [R2]: FAILED! => {"changed": false, "module_stderr": "router-id 12.12.12.12\r\nrouter-id 12.12.12.12\r\n      ^\r\n% Invalid input detected at '^' marker.\r\n\r\nR2(config)#", "module_stdout": "", "msg": "MODULE FAILURE: No start of json char found\nSee stdout/stderr for the exact error"}
+2025-01-08 22:51:53,738 p=794004 u=sushil n=ansible WARNING| [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device
+
+2025-01-08 22:51:53,738 p=794004 u=sushil n=ansible INFO| changed: [R3]
+2025-01-08 22:51:53,741 p=794004 u=sushil n=ansible INFO| PLAY RECAP ***************************************************************************************************************************************************************************
+2025-01-08 22:51:53,741 p=794004 u=sushil n=ansible INFO| R2                         : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-01-08 22:51:53,741 p=794004 u=sushil n=ansible INFO| R3                         : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 22:51:53,843 p=794026 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 22:51:53,843 p=794029 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 22:52:20,895 p=794273 u=sushil n=ansible INFO| PLAY [Verify OSPF Neighborship] ******************************************************************************************************************************************************
+2025-01-08 22:52:20,898 p=794273 u=sushil n=ansible INFO| TASK [Check OSPF Neighbors] **********************************************************************************************************************************************************
+2025-01-08 22:52:21,191 p=794273 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 22:52:21,194 p=794273 u=sushil n=ansible INFO| network_os is set to cisco.ios.ios
+2025-01-08 22:52:21,195 p=794287 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 22:52:21,196 p=794290 u=sushil n=ansible INFO| [DEPRECATION WARNING]: The connection's stdin object is deprecated. Call 
+display.prompt_until(msg) instead. This feature will be removed in version 
+2.19. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2025-01-08 22:52:24,138 p=794273 u=sushil n=ansible INFO| ok: [R3]
+2025-01-08 22:52:24,167 p=794273 u=sushil n=ansible INFO| ok: [R2]
+2025-01-08 22:52:24,168 p=794273 u=sushil n=ansible INFO| TASK [Display OSPF Neighbor Output] **************************************************************************************************************************************************
+2025-01-08 22:52:24,199 p=794273 u=sushil n=ansible INFO| ok: [R2] => {
+    "msg": "OSPF Neighbors for R2: [['']]"
+}
+2025-01-08 22:52:24,207 p=794273 u=sushil n=ansible INFO| ok: [R3] => {
+    "msg": "OSPF Neighbors for R3: [['Neighbor ID     Pri   State           Dead Time   Address         Interface', '11.11.11.11       1   FULL/DR         00:00:34    172.16.40.11    GigabitEthernet3']]"
+}
+2025-01-08 22:52:24,211 p=794273 u=sushil n=ansible INFO| PLAY RECAP ***************************************************************************************************************************************************************************
+2025-01-08 22:52:24,211 p=794273 u=sushil n=ansible INFO| R2                         : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 22:52:24,212 p=794273 u=sushil n=ansible INFO| R3                         : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-01-08 22:52:24,312 p=794287 u=sushil n=ansible INFO| shutdown complete
+2025-01-08 22:52:24,318 p=794290 u=sushil n=ansible INFO| shutdown complete
