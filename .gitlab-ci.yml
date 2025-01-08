@@ -1,4 +1,4 @@
-image: ubuntu:latest
+image: python:3.10-slim
 
 stages:
   - connection_test
@@ -11,8 +11,8 @@ variables:
 
 before_script:
   # Update system packages
-  - sudo apt-get update -y
-  - sudo apt-get install -y python3 python3-pip python3-venv
+  - apt-get update -y
+  - apt-get install -y python3 python3-pip python3-venv
   # Create a virtual environment
   - python3 -m venv .venv
   # Activate the virtual environment
@@ -46,3 +46,4 @@ deploy:
     - ansible-playbook configure_ospf.yml -i inventory.yml --limit R2,R3
     - echo "Verifying OSPF Neighborship between R2 and R3"
     - ansible-playbook verify_ospf.yml -i inventory.yml --limit R2,R3
+
