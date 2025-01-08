@@ -26,6 +26,11 @@ connection_test:
   script:
     - echo "Testing SSH connectivity to all routers"
     - ansible all -i inventory.yml -m ping
+    - apt-get update && apt-get install -y sshpass
+    - echo "Testing SSH connectivity to devices"
+    - sshpass -p 'cisco' ssh -o StrictHostKeyChecking=no cisco@10.1.10.11 "show version"
+    - sshpass -p 'cisco' ssh -o StrictHostKeyChecking=no cisco@10.1.10.12 "show version"
+    - sshpass -p 'cisco' ssh -o StrictHostKeyChecking=no cisco@10.1.10.13 "show version"
 
 build:
   stage: build
