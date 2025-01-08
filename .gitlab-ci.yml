@@ -31,6 +31,8 @@ show_version:
     - python3 fetch_show_version.py 10.1.10.12 cisco cisco
     - echo "Fetching 'show version' using REST API for R3"
     - python3 fetch_show_version.py 10.1.10.13 cisco cisco
+    - echo "Fetching 'show version' using REST API for R5"
+    - python3 fetch_show_version.py 10.1.10.15 cisco cisco
     
 connection_test:
   stage: connection_test
@@ -53,9 +55,9 @@ test:
 deploy:
   stage: deploy
   script:
-    - echo "Configuring OSPF for R2 and R3"
-    - ansible-playbook configure_ospf.yml -i inventory.yml --limit R2,R3
-    - echo "Verifying OSPF Neighborship between R2 and R3"
-    - ansible-playbook verify_ospf.yml -i inventory.yml --limit R2,R3
+    - echo "Configuring OSPF for R5 and R3"
+    - ansible-playbook configure_ospf.yml -i inventory.yml --limit R5,R3
+    - echo "Verifying OSPF Neighborship between R5 and R3"
+    - ansible-playbook verify_ospf.yml -i inventory.yml --limit R5,R3
 
 
